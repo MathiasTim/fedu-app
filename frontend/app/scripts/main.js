@@ -59,6 +59,11 @@ require.config({
 				'jquery'
 			],
 			exports: 'jQuery.cookie'
+		},
+		socialcount: {
+			deps: [
+				'jquery'
+			]
 		}
 	},
 	paths: {
@@ -76,7 +81,8 @@ require.config({
 		bootstrapDropdown: '../components/sass-bootstrap/js/bootstrap-dropdown',
 		bootstrapAlert: '../components/sass-bootstrap/js/bootstrap-alert',
 		jqueryCookie: '../components/jquery.cookie/jquery.cookie',
-		moment: '../components/moment/moment'
+		moment: '../components/moment/moment',
+		socialcount: '../components/SocialCount/src/socialcount'
 	}
 });
 

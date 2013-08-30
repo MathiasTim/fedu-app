@@ -44,6 +44,23 @@
 				</div>
 				<div class="row-fluid well well-small">
 					<button type="button" id="favorite" class="btn span2"><%= iconStar %></button>
+					<ul class="socialcount like de_DE" data-url="http://getfedu.com/<% print(window.location.hash) %>">
+						<li class="facebook">
+							<a href="https://www.facebook.com/sharer/sharer.php?u=http://getfedu.com/<% print(window.location.hash) %>" title="Share on Facebook">
+								<span class="icon icon-facebook-sign"></span><span class="count">Like</span>
+							</a>
+						</li>
+						<li class="googleplus">
+							<a href="https://plus.google.com/share?url=http://getfedu.com/<% print(window.location.hash) %>" title="Share on Google Plus">
+								<span class="icon icon-google-plus-sign"></span><span class="count">+ 1</span>
+							</a>
+						</li>
+						<li class="twitter">
+							<a href="https://twitter.com/intent/tweet?text=http://getfedu.com/<% print(window.location.hash) %>" title="Share on Twitter">
+								<span class="icon icon-twitter-sign"></span><span class="count">Tweet</span>
+							</a>
+						</li>
+					</ul>
 					<button type="button" class="btn span2 offset8" data-toggle="modal" data-target="#flag_modal" title="flag this video"><i class="icon-flag"></i> flag it</button>
 				</div>
 			</div>

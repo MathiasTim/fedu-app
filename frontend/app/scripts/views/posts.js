@@ -13,9 +13,10 @@ define([
 	'text!../templates/posts/detail_video_content.html',
 	'text!../templates/message_template.html',
 	'text!../templates/posts/surprise_me.html',
-	'moment'
+	'moment',
+	'socialcount'
 ], function( $, _, Backbone, TheCollection, TheModel, TheOption, TheConfig, VideoTemplate, GridVideoItemsTemplate, InfoVideoItemsTemplate,
-	PlayerVideoItemsTemplate, DetailVideoContentTemplate, MessageTemplate, SurpriseMeTemplate, Moment) {
+	PlayerVideoItemsTemplate, DetailVideoContentTemplate, MessageTemplate, SurpriseMeTemplate, Moment, Socialcount) {
 	'use strict';
 
 	var View = Backbone.View.extend({
@@ -141,6 +142,9 @@ define([
 		},
 
 		listPost: function(results){
+
+			this.socialCountSettings();
+
 			var templateDetailView = '';
 
 			var favorites = TheOption.favorites;
@@ -645,6 +649,14 @@ define([
 		replaceURLWithHTMLLinks: function(text){
 		    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 		    return text.replace(exp,'<a href="$1" target="_blank">$1</a>');
+		},
+
+		socialCountSettings: function(){
+			if(window.SocialCount.length){
+				console.log(window.SocialCount.cache);
+			} else {
+				console.log('not Loaded!');
+			}
 		}
 	});
 
